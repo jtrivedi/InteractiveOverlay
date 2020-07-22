@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F78DCE6624C7F0F400354504 /* PassthroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78DCE6524C7F0F400354504 /* PassthroughView.swift */; };
 		F7AE142624C6B3110045686A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE142524C6B3110045686A /* AppDelegate.swift */; };
 		F7AE142824C6B3110045686A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE142724C6B3110045686A /* SceneDelegate.swift */; };
 		F7AE142A24C6B3110045686A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE142924C6B3110045686A /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F78DCE6524C7F0F400354504 /* PassthroughView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassthroughView.swift; sourceTree = "<group>"; };
 		F7AE142224C6B3110045686A /* Interruptable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Interruptable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7AE142524C6B3110045686A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7AE142724C6B3110045686A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				F7AE142724C6B3110045686A /* SceneDelegate.swift */,
 				F7AE142924C6B3110045686A /* ViewController.swift */,
 				F7AE143924C6B53F0045686A /* Menu.swift */,
+				F78DCE6524C7F0F400354504 /* PassthroughView.swift */,
 				F7AE143B24C6BB7F0045686A /* Utilities.swift */,
 				F7AE142B24C6B3110045686A /* Main.storyboard */,
 				F7AE142E24C6B3120045686A /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7AE142A24C6B3110045686A /* ViewController.swift in Sources */,
+				F78DCE6624C7F0F400354504 /* PassthroughView.swift in Sources */,
 				F7AE142624C6B3110045686A /* AppDelegate.swift in Sources */,
 				F7AE143A24C6B53F0045686A /* Menu.swift in Sources */,
 				F7AE143C24C6BB7F0045686A /* Utilities.swift in Sources */,

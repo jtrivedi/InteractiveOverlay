@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 /*
- 
+
  GOALS:
  
  - Present a menu
@@ -79,10 +79,11 @@ class MenuContainerView: UIViewController, PassthroughViewDelegate {
     func setupViews() {
         self.view = PassthroughView(frame: view.frame)
 
+        view.addSubview(backdropView)
         backdropView.delegate = self
+        
         backdropView.frame = self.view.frame
         backdropView.backgroundColor = .black
-        view.addSubview(backdropView)
         
         self.add(child: menuViewController)
     }

@@ -8,30 +8,25 @@
 
 import UIKit
 
-protocol PassthroughViewDelegate: class {
-    func receivedPassthroughTouch()
-}
+class ViewController: TableViewController {
 
-class PassthroughView: UIView {
+    var menuContainer = MenuContainerView()
     
-    weak var delegate: PassthroughViewDelegate? = nil
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        addBarButtonItems()
+        
+        add(child: menuContainer)
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    func addBarButtonItems() {
+        let presentMenuBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(presentMenu(sender:)))
+        presentMenuBarButtonItem.tintColor = .systemBlue
+        self.navigationItem.rightBarButtonItem = presentMenuBarButtonItem
     }
     
-    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-        let hitTestedView = super.hitTest(point, with: event)
-        if hitTestedView == self {
-            delegate?.receivedPassthroughTouch()
-            return nil
-        } else {
-            return hitTestedView
-        }
+    @objc func presentMenu(sender: UIBarButtonItem) {
+        menuContainer.toggle()
     }
     
 }
@@ -71,28 +66,3 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
-
-class ViewController: TableViewController {
-
-    var menuContainer = MenuContainerView()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        add(child: menuContainer)
-        
-//        view.addSubview(menuContainer.view)
-//        addChild(menuContainer)
-//        menuContainer.didMove(toParent: self)
-        
-        let presentMenuBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(presentMenu(sender:)))
-        presentMenuBarButtonItem.tintColor = .systemBlue
-        self.navigationItem.rightBarButtonItem = presentMenuBarButtonItem
-    }
-    
-    @objc func presentMenu(sender: UIBarButtonItem) {
-        menuContainer.toggle()
-    }
-    
-}
-
